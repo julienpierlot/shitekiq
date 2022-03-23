@@ -5,7 +5,9 @@ RSpec.describe Shitekiq do
     expect(Shitekiq::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe '.backend' do
+    it 'returns an instance of Queue by default' do
+      expect(described_class.backend).to be_a_kind_of(Queue)
+    end
   end
 end
